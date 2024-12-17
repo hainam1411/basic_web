@@ -32,6 +32,49 @@ body {
     scroll-behavior: smooth;
 }
 
+/*main paragraph*/
+p {
+    font-family: var(--p-family);
+    color: var(--black-color);
+    font-size: 1rem;
+    line-height: 2;
+    margin-bottom: 30px;
+}
+
+/*button*/
+.button-container {
+    position: relative;
+}
+
+.read-more-button {
+    color: var(--white-color);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, var(--main-color), var(--secondary-color));
+    border-radius: 4px;
+    position: relative;
+    overflow: visible;
+    transition: background 0.3s ease;
+    width: 200px;
+    height: 50px;
+}
+
+.read-more-button .arrow {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    background-image: url("images/arrow.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: -40px;
+    transition: transform 0.3s ease;
+}
+
+.read-more-button:hover .arrow {
+    transform: translateX(10px);
+}
 
 /*header*/
 .hero-header {
@@ -145,11 +188,6 @@ h1 {
     font-weight: 700;
 }
 
-p {
-    margin-bottom: 30px;
-    line-height: 1.5;
-    font-size: 1rem;
-}
 
 .social-links {
     display: flex;
@@ -237,11 +275,12 @@ p {
     justify-content: space-between;
     width: 50px;
     margin-top: 20px;
-    gap: 10px;
+    gap: 25px;
     cursor: pointer;
-    position: absolute;
-    right: -20px;
-    bottom: -20px;
+    position: relative;
+    right: 20px;
+    bottom: -25px;
+
 }
 
 .slider-nav i {
@@ -257,4 +296,55 @@ p {
 .slider-nav i:hover {
     background-color: var(--black-color);
     color: var(--white-color);
+}
+
+
+
+/*Story section*/
+.our-story {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 150px 20px;
+    height: auto;
+}
+
+.our-story .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.our-story img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+.story-content {
+    max-width: 500px;
+    padding: 50px 20px;
+}
+
+.story-content h2 {
+    margin-bottom: 20px;
+    margin-top: -20px;
+}
+
+.story-content p {
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.btn2 {
+    color: var(--gray-color);
+    text-decoration: none;
+    transition-duration: 0.7s;
+    font-size: 1.2rem;
+}
+
+.btn2:hover {
+    color: var(--main-color);
 }
