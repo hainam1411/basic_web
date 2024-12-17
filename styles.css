@@ -32,6 +32,24 @@ body {
     scroll-behavior: smooth;
 }
 
+h1 {
+   font-size: 4rem;
+    color: var(--main-color);
+    font-family: var(--heading-family);
+}
+
+h2 {
+    font-size: 2.8rem;
+    color: var(--main-color);
+    font-family: var(--heading-family);
+}
+
+h3 {
+    font-size: 1.6rem;
+    color: var(--main-color);
+    font-family: var(--heading-family);
+}
+
 /*main paragraph*/
 p {
     font-family: var(--p-family);
@@ -55,9 +73,12 @@ p {
     border-radius: 4px;
     position: relative;
     overflow: visible;
-    transition: background 0.3s ease;
+    transition: background 0.5s ease;
     width: 200px;
     height: 50px;
+}
+.read-more-button:hover {
+    background: linear-gradient(to left, var(--main-color), var(--secondary-color));
 }
 
 .read-more-button .arrow {
@@ -347,4 +368,260 @@ h1 {
 
 .btn2:hover {
     color: var(--main-color);
+}
+
+
+/*Book release*/
+.book-section {
+    text-align: center;
+    background: url("images/bg2.png");
+    padding: 100px 10px;
+}
+
+.section-header {
+    margin-bottom: 20px;
+}
+
+.section-header h2 {
+    margin-bottom: 10px;
+    color: var(--black-color);
+    font-size: 2rem;
+}
+
+.section-header p {
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.book-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 35px;
+    padding: 20px 0;
+}
+
+.book-card {
+    background-color:  var(--white-color);
+    border-radius: 10px;
+    padding: 15px;
+    width: 200px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.book-card:hover {
+    transform: scale(1.05);
+}
+
+.book-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.book-card .price {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--black-color);
+}
+
+
+/*find book section*/
+.find-section {
+    display: flex;
+    width: 100%;
+    max-width: 1500px;
+    padding: 150px;
+    justify-content: center;
+    gap: 50px;
+}
+
+.book-gallery {
+    display: grid;
+    grid-template-columns:  1fr 1fr;
+   grid-gap: 40px;
+    margin-right: 150px;
+}
+
+.book-item img {
+    width: 190px;
+    height: 230px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.book-info {
+    max-width: 450px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.book-info h2 {
+    margin-bottom: 10px;
+}
+
+.book-info p {
+    margin-bottom: 20px;
+}
+
+.book-stats {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.stat {
+    align-items: center;
+}
+
+.stat p {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.stat span {
+    font-size: 0.9rem;
+    color: var(--black-color);
+}
+
+
+/*Flash sale*/
+.flash-sale {
+    display: flex;
+    padding: 50px;
+    background: url("images/bg2.png");
+}
+
+.flash-sale-left {
+    flex: 1;
+    padding: 20px;
+}
+
+.flash-sale-left h2 {
+    color: var(--black-color);
+    font-size: 24px;
+}
+
+.flash-sale-left p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.countdown {
+    display: flex;
+    gap: 20px;
+}
+
+.time-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--main-color);
+    color: var(--white-color);
+    padding: 10px;
+    border-radius: 5px;
+}
+.time-box .number {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.time-box .label {
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.flash-sale-right {
+    display: flex;
+    gap: 15px;
+}
+
+.book {
+    display: flex;
+    background-color: var(--white-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    padding: 20px;
+}
+
+.book img {
+    width: 120px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px 0 0 8px;
+}
+
+.book-info {
+    flex: 1;
+    padding: 5px;
+    position: relative;
+}
+
+.book-info .discount {
+    position: absolute;
+    top: -10px;
+    right: 5px;
+    background-color: #4caf50;
+    color: var(--white-color);
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 5px;
+}
+
+
+
+/*Author*/
+.author-section {
+    text-align: center;
+    padding: 150px 50px;
+    max-width: 1500px;
+    margin: 0 auto;
+
+}
+
+.author-section h2 {
+    font-size: 28px;
+    color: var(--black-color);
+    margin-bottom: 10px;
+}
+
+.author-section p{
+    font-size: 16px;
+    color: var(--gray-color);
+    margin-bottom: 40px;
+}
+
+.author-list {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.author-item {
+    text-align: center;
+    max-width: 120px;
+}
+
+.author-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.author-item h4 {
+    font-size: 16px;
+    color: var(--black-color);
+    margin: 5px 0;
+}
+
+.author-item span{
+    font-size: 14px;
+    color: var(--gray-color);
 }
