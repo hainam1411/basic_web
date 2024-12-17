@@ -1,0 +1,627 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* CSS Variables */
+
+:root {
+    --main-color: #6b705c;
+    --secondary-color: #b4b7aa;
+    --p-color: #666;
+    --gray-color: #999;
+    --white-color: #ffffff;
+    --black-color: #313538;
+    --big-font: 4.5rem;
+    --heading-family: "Playfair Display", serif;
+    --p-family: "Roboto", system-ui;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--white-color);
+    scroll-behavior: smooth;
+}
+
+h1 {
+   font-size: 4rem;
+    color: var(--main-color);
+    font-family: var(--heading-family);
+}
+
+h2 {
+    font-size: 2.8rem;
+    color: var(--main-color);
+    font-family: var(--heading-family);
+}
+
+h3 {
+    font-size: 1.6rem;
+    color: var(--main-color);
+    font-family: var(--heading-family);
+}
+
+/*main paragraph*/
+p {
+    font-family: var(--p-family);
+    color: var(--black-color);
+    font-size: 1rem;
+    line-height: 2;
+    margin-bottom: 30px;
+}
+
+/*button*/
+.button-container {
+    position: relative;
+}
+
+.read-more-button {
+    color: var(--white-color);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, var(--main-color), var(--secondary-color));
+    border-radius: 4px;
+    position: relative;
+    overflow: visible;
+    transition: background 0.5s ease;
+    width: 200px;
+    height: 50px;
+}
+.read-more-button:hover {
+    background: linear-gradient(to left, var(--main-color), var(--secondary-color));
+}
+
+.read-more-button .arrow {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    background-image: url("images/arrow.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: -40px;
+    transition: transform 0.3s ease;
+}
+
+.read-more-button:hover .arrow {
+    transform: translateX(10px);
+}
+
+/*header*/
+.hero-header {
+    background-image: url("/images/bg1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/*navbar*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: transparent;
+    font-family: Arial, sans-serif;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 70px;
+    margin-right: 60px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li a {
+    color: var(--black-color);
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    color: var(--main-color);
+}
+.nav-links.active {
+    display: flex;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.shopping-cart i {
+    font-size: 20px;
+    color: var(--black-color);
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: var(--secondary-color);
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 5px;
+    color: var(--white-color);
+}
+
+.search-bar button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color:  var(--black-color);
+    font-size: 10px;
+}
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/*hero-section*/
+
+.hero-section {
+    transition: transform 0.5s ease;
+    transform: translateY(0);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 80px;
+}
+
+.hero-content {
+    max-width: 550px;
+    padding-left: 60px;
+}
+
+h1 {
+    line-height: 1.2;
+    margin-bottom: 20px;
+    font-size: 4.5rem;
+    font-weight: 700;
+}
+
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 40px;
+    gap: 10px;
+    margin-top: -300px;
+}
+
+.social-links a {
+    color: var(--black-color);
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    top: -60px;
+    position: relative;
+}
+
+.slider-background {
+    position: absolute;
+    top: 100px;
+    left: 80px;
+    width: 70%;
+    height: 480px;
+    background-color: var(--secondary-color);
+    z-index: -1;
+    border-radius: 10px;
+    transition: border-radius 0.3s ease;
+}
+
+.slider-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-top: 20px;
+}
+
+.slider-container {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+.slider-image {
+    width: 100%;
+    flex-shrink: 0;
+    transition: transform 0.5s ease;
+    border-radius: 10px;
+}
+
+.book-details {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.book-details h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--black-color);
+}
+
+.book-details p {
+    font-size: 0.9rem;
+    width: 100%;
+    max-width: 70%;
+    margin: 10px auto;
+}
+
+.price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--white-color);
+}
+
+.slider-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 50px;
+    margin-top: 20px;
+    gap: 25px;
+    cursor: pointer;
+    position: relative;
+    right: 20px;
+    bottom: -25px;
+
+}
+
+.slider-nav i {
+    font-size: 1.5rem;
+    color: var(--black-color);
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid var(--black-color);
+    padding: 5px;
+    transition: background-color 0.8s, color 0.8s;
+}
+
+.slider-nav i:hover {
+    background-color: var(--black-color);
+    color: var(--white-color);
+}
+
+
+
+/*Story section*/
+.our-story {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 150px 20px;
+    height: auto;
+}
+
+.our-story .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.our-story img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+.story-content {
+    max-width: 500px;
+    padding: 50px 20px;
+}
+
+.story-content h2 {
+    margin-bottom: 20px;
+    margin-top: -20px;
+}
+
+.story-content p {
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.btn2 {
+    color: var(--gray-color);
+    text-decoration: none;
+    transition-duration: 0.7s;
+    font-size: 1.2rem;
+}
+
+.btn2:hover {
+    color: var(--main-color);
+}
+
+
+/*Book release*/
+.book-section {
+    text-align: center;
+    background: url("images/bg2.png");
+    padding: 100px 10px;
+}
+
+.section-header {
+    margin-bottom: 20px;
+}
+
+.section-header h2 {
+    margin-bottom: 10px;
+    color: var(--black-color);
+    font-size: 2rem;
+}
+
+.section-header p {
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.book-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 35px;
+    padding: 20px 0;
+}
+
+.book-card {
+    background-color:  var(--white-color);
+    border-radius: 10px;
+    padding: 15px;
+    width: 200px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.book-card:hover {
+    transform: scale(1.05);
+}
+
+.book-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.book-card .price {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--black-color);
+}
+
+
+/*find book section*/
+.find-section {
+    display: flex;
+    width: 100%;
+    max-width: 1500px;
+    padding: 150px;
+    justify-content: center;
+    gap: 50px;
+}
+
+.book-gallery {
+    display: grid;
+    grid-template-columns:  1fr 1fr;
+   grid-gap: 40px;
+    margin-right: 150px;
+}
+
+.book-item img {
+    width: 190px;
+    height: 230px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.book-info {
+    max-width: 450px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.book-info h2 {
+    margin-bottom: 10px;
+}
+
+.book-info p {
+    margin-bottom: 20px;
+}
+
+.book-stats {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.stat {
+    align-items: center;
+}
+
+.stat p {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.stat span {
+    font-size: 0.9rem;
+    color: var(--black-color);
+}
+
+
+/*Flash sale*/
+.flash-sale {
+    display: flex;
+    padding: 50px;
+    background: url("images/bg2.png");
+}
+
+.flash-sale-left {
+    flex: 1;
+    padding: 20px;
+}
+
+.flash-sale-left h2 {
+    color: var(--black-color);
+    font-size: 24px;
+}
+
+.flash-sale-left p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.countdown {
+    display: flex;
+    gap: 20px;
+}
+
+.time-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--main-color);
+    color: var(--white-color);
+    padding: 10px;
+    border-radius: 5px;
+}
+.time-box .number {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.time-box .label {
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.flash-sale-right {
+    display: flex;
+    gap: 15px;
+}
+
+.book {
+    display: flex;
+    background-color: var(--white-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    padding: 20px;
+}
+
+.book img {
+    width: 120px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px 0 0 8px;
+}
+
+.book-info {
+    flex: 1;
+    padding: 5px;
+    position: relative;
+}
+
+.book-info .discount {
+    position: absolute;
+    top: -10px;
+    right: 5px;
+    background-color: #4caf50;
+    color: var(--white-color);
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 5px;
+}
+
+
+
+/*Author*/
+.author-section {
+    text-align: center;
+    padding: 150px 50px;
+    max-width: 1500px;
+    margin: 0 auto;
+
+}
+
+.author-section h2 {
+    font-size: 28px;
+    color: var(--black-color);
+    margin-bottom: 10px;
+}
+
+.author-section p{
+    font-size: 16px;
+    color: var(--gray-color);
+    margin-bottom: 40px;
+}
+
+.author-list {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.author-item {
+    text-align: center;
+    max-width: 120px;
+}
+
+.author-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.author-item h4 {
+    font-size: 16px;
+    color: var(--black-color);
+    margin: 5px 0;
+}
+
+.author-item span{
+    font-size: 14px;
+    color: var(--gray-color);
+}

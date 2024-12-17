@@ -1,24 +1,305 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Web basic</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Just a litle bookstore</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.min.css">
 </head>
 <body>
+<header class="hero-header">
 
-    <h1>Welcome to my website</h1>
+    <!--    hero navbar-->
+    <nav class="navbar">
+        <div class="navbar-left">
+            <div class="logo">
+                <img src="images/logo.png" alt="logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Story</a></li>
+                <li><a href="#">Book</a></li>
+                <li><a href="#">Art</a></li>
+                <li><a href="#">About us</a></li>
+            </ul>
+        </div>
 
-    <p>This is a basic website template.</p>
+        <div class="navbar-right">
+            <div class="shopping-cart">
+                <i class="ri-shopping-bag-line"></i>
+            </div>
 
-    <h2>Navigation</h2>
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-    </ul>
-    <p>i don't know what i'm doing here. Lmao :v. I'll delete when done.</p>
-<p>I'll make a conflict in here</p>
-    <a href="#">aaa</a>
+            <div class="search-bar">
+                <input type="text" placeholder="Find your book">
+                <button type="submit"><i class="ri-search-line"></i></button>
+            </div>
+
+            <div class="menu-icon" id="menu-icon">
+                <i class="ri-menu-4-line"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!--    Hero section-->
+    <section class="hero-section" id="hero-section">
+        <div class="container">
+
+            <!--content left-->
+            <div class="hero-content">
+                <h1>Just a little Book Store</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Ad assumenda corporis dignissimos dolorum et eveniet,
+                    excepturi fuga id illum odit porro rem suscipit tempora vel vero.
+                    Rerum, sunt, suscipit. Tempora!</p>
+                <div class="button-container">
+                    <a href="#" class="read-more-button">
+                        Read more
+                        <span class="arrow"></span>
+                    </a>
+                </div>
+
+                <!--Socical link-->
+                <div class="social-links">
+                    <a href="#"><i class="ri-facebook-circle-fill"></i></a>
+                    <a href="#"><i class="ri-twitter-fill"></i></a>
+                    <a href="#"><i class="ri-instagram-fill"></i></a>
+                </div>
+            </div>
+
+            <!--SLider-->
+            <div class="slider">
+                <div class="slider-background"></div>
+                <div class="slider-wrapper">
+                    <div class="slider-container">
+                        <img src="images/img1.png" alt="Book" class="slider-image">
+                        <img src="images/img2.png" alt="Book" class="slider-image">
+                        <img src="images/img3.png" alt="Book" class="slider-image">
+                        <img src="images/img4.png" alt="Book" class="slider-image">
+                        <img src="images/img5.png" alt="Book" class="slider-image">
+                    </div>
+                </div>
+
+                <div class="book-details">
+                    <h3 id="image-title">Once upon a time</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <span class="price" id="image-price">15.50$</span>
+                </div>
+
+                <div class="slider-nav">
+                    <i class="ri-arrow-left-s-line" id="left-arrow"></i>
+                    <i class="ri-arrow-right-s-line" id="right-arrow"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+</header>
+
+<!--Story section-->
+<section class="our-story" id="story-section">
+    <div class="container">
+        <div class="story-image">
+            <img src="images/store.png" alt="#">
+        </div>
+        <div class="story-content">
+            <h2>About my Bookstore</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Atque earum eligendi eos facilis minima, natus nihil veritatis voluptatum?
+                Adipisci aperiam facere inventore iusto maiores neque nisi quisquam,
+                rem repellendus voluptate.</p>
+            <a href="#" class="btn2">Learn more <i class="ri-arrow-right-line"></i></a>
+        </div>
+    </div>
+</section>
+
+<!--Book section-->
+<section class="book-section">
+    <div class="section-header">
+        <h2>New release</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At maxime minima quo tempora unde? Aut est hic illo
+            nihil odio,
+            omnis perferendis quae quod repellendus, repudiandae saepe sapiente tempora!
+            Perspiciatis.</p>
+    </div>
+    <div class="book-container">
+        <div class="book-card">
+            <img src="images/book1.png">
+            <h3>The Book of Tea</h3>
+            <span class="price">150$</span>
+        </div>
+        <div class="book-card">
+            <img src="images/book2.png">
+            <h3>The Herb Witch Princess</h3>
+            <span class="price">150$</span>
+        </div>
+        <div class="book-card">
+            <img src="images/book3.png">
+            <h3>Around The Moon</h3>
+            <span class="price">150$</span>
+        </div>
+        <div class="book-card">
+            <img src="images/book4.png">
+            <h3>The Complete Novel Of Jane Austen</h3>
+            <span class="price">150$</span>
+        </div>
+        <div class="book-card">
+            <img src="images/book5.png">
+            <h3>The Great Gatsby</h3>
+            <span class="price">150$</span>
+        </div>
+    </div>
+</section>
+
+<!--Find book section-->
+<section class="find-section">
+    <div class="book-gallery">
+        <div class="book-item">
+            <img src="images/find1.png">
+        </div>
+        <div class="book-item">
+            <img src="images/find2.png">
+        </div>
+        <div class="book-item">
+            <img src="images/find3.png">
+        </div>
+        <div class="book-item">
+            <img src="images/find4.png">
+        </div>
+    </div>
+
+    <div class="book-info">
+        <h2>Find Your Favorite Books Here</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            A ab amet blanditiis commodi,
+            deleniti dolore enim esse et maiores maxime minus modi nemo,
+            nisi nulla quae quo reiciendis repudiandae voluptatibus.</p>
+        <div class="book-stats">
+            <div class="stat">
+                <p>80</p>
+                <span>Books Best seller</span>
+            </div>
+            <div class="stat">
+                <p>80</p>
+                <span>Books Upcoming</span>
+            </div>
+            <div class="stat">
+                <p>80</p>
+                <span>Books's today</span>
+            </div>
+        </div>
+        <div class="button-container">
+            <a href="#" class="read-more-button">
+                Read more
+                <span class="arrow"></span>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<!--Flash sale-->
+<section class="flash-sale">
+    <div class="flash-sale-left">
+        <h2>Flash Sale</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Ad alias atque consectetur dignissimos dolor est exercitationem laudantium
+            nulla odio perspiciatis,
+        </p>
+        <div class="countdown">
+            <div class="time-box">
+                <span class="number">05</span>
+                <span class="number">Days</span>
+            </div>
+            <div class="time-box">
+                <span class="number">08</span>
+                <span class="number">Hours</span>
+            </div>
+            <div class="time-box">
+                <span class="number">35</span>
+                <span class="number">Mins</span>
+            </div>
+            <div class="time-box">
+                <span class="number">12</span>
+                <span class="number">Secs</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="flash-sale-right">
+        <article class="book">
+            <img src="images/find1.png">
+            <div class="book-info">
+                <span class="discount">28% off</span>
+                <h3>Once Upon a Time</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Adipisci, reiciendis repellendus sint vitae!
+                    Commodi, deleniti ipsa nostrum odit pariatur rerum ut.</p>
+                <span class="price">130$ <del>260$</del></span>
+            </div>
+        </article>
+
+        <article class="book">
+            <img src="images/find1.png">
+            <div class="book-info">
+                <span class="discount">28% off</span>
+                <h3>The Lord Of The Ring: Two Towers</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Adipisci, reiciendis repellendus sint vitae!
+                    Commodi, deleniti ipsa nostrum odit pariatur rerum ut.</p>
+                <span class="price">130$ <del>260$</del></span>
+            </div>
+        </article>
+    </div>
+</section>
+
+
+<!--Author-->
+<section class="author-section">
+    <h2>Famous Authors</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto assumenda debitis distinctio dolorem eius itaque molestias nobis omnis possimus, quis reiciendis repudiandae? A autem consectetur cum debitis facere labore, voluptates!</p>
+    <div class="author-list">
+        <div class="author-item">
+            <img src="images/author1.webp">
+            <h4>William Shakespare</h4>
+            <span> 32 Published</span>
+        </div>
+        <div class="author-item">
+            <img src="images/author2.jpg">
+            <h4>Leo Tolstoy</h4>
+            <span> 32 Published</span>
+        </div>
+        <div class="author-item">
+            <img src="images/author3.jpg">
+            <h4>Stephen King</h4>
+            <span> 32 Published</span>
+        </div>
+        <div class="author-item">
+            <img src="images/author4.jpg">
+            <h4>Virginia Woolf</h4>
+            <span> 32 Published</span>
+        </div>
+        <div class="author-item">
+            <img src="images/author5.webp">
+            <h4>JR Tolkien</h4>
+            <span> 32 Published</span>
+        </div>
+        <div class="author-item">
+            <img src="images/author6.jpg">
+            <h4> C. S. Lewis</h4>
+            <span> 32 Published</span>
+        </div>
+        <div class="author-item">
+            <img src="images/author7.jpeg">
+            <h4>J. K. Rowling</h4>
+            <span> 32 Published</span>
+        </div>
+
+    </div>
+</section>
+<footer>
+</footer>
+
+<script src="script.js"></script>
 </body>
-<a>aaa</a>
 </html>
