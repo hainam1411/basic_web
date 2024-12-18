@@ -1,5 +1,12 @@
-// slide show
+// button menu
+const menuIcon = document.getElementById('menu-icon');
+const navLinks = document.getElementById('nav-links');
 
+menuIcon.addEventListener('click', function () {
+    navLinks.classList.toggle('show');
+});
+
+// slide show
 const images = [
     {src: 'img1.png', title: 'Once upon a Story', price: '15.50$'},
     {src: 'img2.png', title: 'Love Finds the Way', price: '20.99$'},
