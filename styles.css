@@ -97,6 +97,41 @@ p {
     transform: translateX(10px);
 }
 
+/*Responsive title & button */
+@media (max-width: 768px) {
+    h1{
+        font-size: 3rem;
+    }
+    h2 {
+        font-size: 2.2rem;
+    }
+    h3 {
+        font-size: 1.3rem;
+    }
+    p {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+    .btn {
+        padding: 12px 24px;
+        font-size: 0.85rem;
+    }
+    .btn2 {
+        font-size: 1rem;
+    }
+    .read-more-button {
+        width: 160px;
+        height: 40px;
+    }
+    .read-more-button .arrow{
+        width: 60px;
+        height: 60px;
+        right: -30px;
+    }
+}
+
+
+
 /*header*/
 .hero-header {
     background-image: url("/images/bg1.png");
@@ -181,6 +216,46 @@ p {
     display: none;
     font-size: 24px;
     cursor: pointer;
+}
+
+
+/*Responsive for navbar*/
+@media (max-width: 768px) {
+
+    .nav{
+        position: relative;
+        z-index: 10;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        height: 50%;
+        top: 90px;
+        left: 0;
+        right: 0;
+        background-color: var(--secondary-color);
+        max-height: 0;
+        overflow: hidden;
+        text-align: center;
+        justify-content: center;
+        transition: max-height 0.5s ease-in-out;
+        z-index: 1000;
+    }
+
+    .nav-links.show {
+        max-height: 300px;
+    }
+
+    .menu-icon {
+        display: flex;
+        z-index: 1001;
+    }
+
+    header {
+        z-index: 1000;
+    }
 }
 
 /*hero-section*/
